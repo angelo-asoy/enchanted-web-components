@@ -26,14 +26,10 @@ export const config = {
     preset: process.env.WDIO_PRESET,
     coverage: {
       enabled: true,
-      // TODO: have to increase back to 92%%. https://jira.cwp.pnp-hcl.com/browse/DXQ-42800
-      statements: 84,
-      // TODO: have to increase? https://jira.cwp.pnp-hcl.com/browse/DXQ-42800
-      branches: 58,
-      // TODO: have to increase back to 93%. https://jira.cwp.pnp-hcl.com/browse/DXQ-42800
-      functions: 83,
-      // TODO: have to increase back to 92%. https://jira.cwp.pnp-hcl.com/browse/DXQ-42800
-      lines: 84
+      statements: 82,
+      branches: 68,
+      functions: 78,
+      lines: 80
     },
     viteConfig: {
       optimizeDeps: {

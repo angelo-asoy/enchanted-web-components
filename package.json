@@ -28,14 +28,13 @@
     "Mridul Shrivastava <mridul.shrivastava@hcl.com>"
   ],
   "scripts": {
-    "build-clean": "rm -rf ./dist",
-    "build-final": "cp -r enchanted.css ./dist/ && cp -r src/styles ./dist/ && cp -r src/static/assets/*.svg ./dist/static/assets && cp -r src/static/assets/*.jpg ./dist/static/assets && cp -r src/static/assets/SearchIconsv2 ./dist/static/assets",
+    "clean": "rm -rf node_modules && rm -rf ./dist",
     "build": "tsc",
+    "build-complete": "cp -r enchanted.css ./dist/ && cp -r src/styles ./dist/ && cp -r src/static/assets/*.svg ./dist/static/assets && cp -r src/static/assets/*.jpg ./dist/static/assets && cp -r src/static/assets/SearchIconsv2 ./dist/static/assets",
     "lint": "eslint src",
     "lint-fix": "eslint src --fix",
     "test-unit": "wdio run ./wdio.unit.conf.ts",
     "test-snapshot": "wdio run ./wdio.snapshot.conf.ts",
-    "update-snapshot-baseline": "wdio run ./wdio.snapshot.conf.ts --update-visual-baseline",
     "compile-enchanted-css": "rm -f ./enchanted.css && sass --no-source-map ./src/styles/enchanted/enchanted.scss:enchanted.css",
     "watch-enchanted-css": "rm -f ./enchanted.css && sass --watch --no-source-map ./src/styles/enchanted/enchanted.scss:enchanted.css",
     "storybook": "storybook dev -p 6006",
