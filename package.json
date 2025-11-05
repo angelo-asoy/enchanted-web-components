@@ -29,7 +29,7 @@
   ],
   "scripts": {
     "clean": "rm -rf node_modules && rm -rf ./dist",
-    "prepare": "npm run compile-enchanted-css && cp enchanted.css ./dist/",
+    "prepare": "npm run compile-enchanted-css && cp enchanted.css ./dist/ && cp -r ./src/styles  ./dist && cp ./src/static/assets/*.svg ./dist/static/assets/ && cp ./src/static/assets/*.jpg ./dist/static/assets/",
     "build": "tsc",
     "lint": "eslint src",
     "lint-fix": "eslint src --fix",
