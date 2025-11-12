@@ -23,8 +23,7 @@ import { DxAcBaseElement } from './dx-ac-base-element';
 import { AVATAR_PARTS, AVATAR_VARIANT, AVATAR_TYPE, AVATAR_COLOR } from '../../types/cssClassEnums';
 
 // Icon imports
-import placeHolderIcon from '../../static/assets/test-avatar-icon.svg';
-import placeHolderImage from '../../static/assets/test-avatar-image.jpg';
+import '@hcl-software/enchanted-icons-web-component/dist/carbon/es/arrow--up';
 
 @customElement('dx-avatar')
 export class DxAvatar extends DxAcBaseElement {
@@ -53,11 +52,7 @@ export class DxAvatar extends DxAcBaseElement {
     return this.color ? `${part} ${this.color}` : `${part} ${AVATAR_COLOR.AVATAR_DEFAULT_COLOR}`;
   }
 
-  private renderImage(src: string, part: AVATAR_PARTS, alt: string) {
-    return html`<img data-testid="dx-avatar-img" src="${src}" part=${this.getPartAttribute(part)} alt="${alt}" />`;
-  }
-
-  private renderIcon(src: TemplateResult | string | undefined, part: AVATAR_PARTS) {
+  private renderAvatar(src: TemplateResult | string | undefined, part: AVATAR_PARTS) {
     if (typeof src === 'string') {
       return html`<img data-testid="dx-avatar-img" src="${src}" part=${this.getPartAttribute(part)} alt="${part}" />`;
     }
@@ -78,27 +73,27 @@ export class DxAvatar extends DxAcBaseElement {
       case AVATAR_VARIANT.AVATAR_ICON:
         switch (this.type) {
           case AVATAR_TYPE.AVATAR_ROUNDED:
-            return this.renderImage(this.iconUrl || placeHolderIcon, AVATAR_PARTS.AVATAR_ICON_ROUNDED, AVATAR_PARTS.AVATAR_ICON_ROUNDED);
+            return this.renderAvatar(this.iconUrl || html`<icon-arrow-up size="16"></icon-arrow-up>`, AVATAR_PARTS.AVATAR_ICON_ROUNDED);
           case AVATAR_TYPE.AVATAR_CIRCULAR:
-            return this.renderImage(this.iconUrl || placeHolderIcon, AVATAR_PARTS.AVATAR_ICON_CIRCULAR, AVATAR_PARTS.AVATAR_ICON_CIRCULAR);
+            return this.renderAvatar(this.iconUrl || html`<icon-arrow-up size="16"></icon-arrow-up>`, AVATAR_PARTS.AVATAR_ICON_CIRCULAR);
           default:
             return nothing;
         }
       case AVATAR_VARIANT.AVATAR_ICON_TEMPLATE:
         switch (this.type) {
           case AVATAR_TYPE.AVATAR_ROUNDED:
-            return this.renderIcon(this.iconTemplate || placeHolderIcon, AVATAR_PARTS.AVATAR_ICON_TEMPLATE_ROUNDED);
+            return this.renderAvatar(this.iconTemplate || html`<icon-arrow-up size="16"></icon-arrow-up>`, AVATAR_PARTS.AVATAR_ICON_TEMPLATE_ROUNDED);
           case AVATAR_TYPE.AVATAR_CIRCULAR:
-            return this.renderIcon(this.iconTemplate || placeHolderIcon, AVATAR_PARTS.AVATAR_ICON_TEMPLATE_CIRCULAR);
+            return this.renderAvatar(this.iconTemplate || html`<icon-arrow-up size="16"></icon-arrow-up>`, AVATAR_PARTS.AVATAR_ICON_TEMPLATE_CIRCULAR);
           default:
             return nothing;
         } 
       case AVATAR_VARIANT.AVATAR_IMG:
         switch (this.type) {
           case AVATAR_TYPE.AVATAR_ROUNDED:
-            return this.renderImage(this.imgUrl || placeHolderImage, AVATAR_PARTS.AVATAR_IMAGE_ROUNDED, AVATAR_PARTS.AVATAR_IMAGE_ROUNDED);
+            return this.renderAvatar(this.imgUrl || html`<icon-arrow-up size="16"></icon-arrow-up>`, AVATAR_PARTS.AVATAR_IMAGE_ROUNDED);
           case AVATAR_TYPE.AVATAR_CIRCULAR:
-            return this.renderImage(this.imgUrl || placeHolderImage, AVATAR_PARTS.AVATAR_IMAGE_CIRCULAR, AVATAR_PARTS.AVATAR_IMAGE_CIRCULAR);
+            return this.renderAvatar(this.imgUrl || html`<icon-arrow-up size="16"></icon-arrow-up>`, AVATAR_PARTS.AVATAR_IMAGE_CIRCULAR);
           default:
             return nothing;
         }  
