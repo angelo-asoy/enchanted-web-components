@@ -200,7 +200,7 @@
   }
 
   &::part(button-contained) {
-    // background-color: palette.clr(light, background, paper) !important;
+    background-color: palette.clr(light, background, paper) !important;
     border: none !important;
     display: flex;
     align-items: center;
