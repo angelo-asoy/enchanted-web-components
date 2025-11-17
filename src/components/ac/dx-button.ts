@@ -179,6 +179,11 @@ export class DxButton extends DxAcBaseElement {
     return nothing;
   }
 
+  public _focusButton() {
+    const button = this.renderRoot.querySelector('button');
+    button?.focus();
+  }
+
   render() {
     return html`
       <button
