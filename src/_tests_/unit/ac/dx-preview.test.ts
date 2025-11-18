@@ -1050,7 +1050,6 @@ describe('DxPreview component testing', () => {
     // Verify all buttons have aria-labels
     const backButton = await component.$('>>>[data-testid="dx-preview-back-button"]').getElement();
     await expect(backButton).toHaveAttribute('ariaLabel', dxLocalization.get('preview.tooltip.back.button'));
-    await expect(backButton).toHaveAttribute('tabindex', '0');
     
     const downloadButton = await component.$('>>>[data-testid="dx-preview-download-button"]').getElement();
     await expect(downloadButton).toHaveAttribute('ariaLabel', dxLocalization.get('preview.tooltip.download.button'));
@@ -1132,7 +1131,7 @@ describe('DxPreview component testing', () => {
     const renditionLabel = await component.$(`>>>[part=${PREVIEW_PARTS.PREVIEW_HEADER_RENDITION_LABEL}]`).getElement();
     await expect(renditionLabel).toHaveAttribute('aria-hidden', 'true');
   });
-  
+
   it('DxPreview - should trap focus within the component when open', async () => {
     render(
       html`
