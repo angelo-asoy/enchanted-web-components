@@ -3,10 +3,21 @@
 ## Unreleased
 
 ### Added
+- Added comprehensive ARIA attributes and labels for screen reader accessibility in `dx-preview` component
+- Added `aria-modal="true"` attribute to dialog role in `dx-dialog` component
+- Added keyboard navigation tests for `dx-dialog` close button (Enter and Space keys)
+- Added ARIA accessibility tests for `dx-preview` and `dx-dialog` components
 
 ### Fixed
+- Fixed screen reader accessibility in `dx-preview` component by adding proper ARIA labels, roles, and attributes
+- Fixed screen reader accessibility in `dx-dialog` component with proper ARIA modal attribute
+- Fixed focus management in `dx-preview` to focus on dialog element instead of header
+- Fixed `dx-preview` interactive elements to have proper `aria-hidden` and `aria-label` attributes
+- Fixed keyboard accessibility for `dx-dialog` close button
 
 ### Changed
+- Changed `dx-preview` backdrop to use `role="presentation"` for better screen reader experience
+- Changed `dx-preview` container to use proper dialog role with ARIA attributes
 
 ### Breaking changes
 
