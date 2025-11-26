@@ -36,10 +36,10 @@ export class DxMenu extends DxAcBaseElement {
   @property({ type: Number })
   menuDelay = 300;
 
-  @property({ type: String })
+  @property({ type: String, reflect: true })
   placement: 'bottom-start' | 'bottom-end' = 'bottom-start';
 
-  @property({ type: String })
+  @property({ type: String, reflect: true })
   size: 'sm' | 'md' = 'md';
 
   @state() componentId = uuid();
