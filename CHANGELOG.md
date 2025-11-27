@@ -3,6 +3,7 @@
 ## Unreleased
 
 ### Added
+- Added a new storybook component for `dx-popover`.
 
 ### Fixed
 - Refactored `dx-dialog` component to use reactive state properties (`@state()`) for ARIA attributes instead of direct DOM manipulation, improving maintainability and alignment with Lit's reactive programming model
