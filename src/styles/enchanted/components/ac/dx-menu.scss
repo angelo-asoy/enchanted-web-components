@@ -54,7 +54,7 @@
     min-width: 16px;
     min-height: 16px;
     max-height: calc(100% - 32px);
-    width: 240px;
+    width: auto;
     border-radius: 4px;
     outline: 0px;
     padding: 0px;
@@ -73,5 +73,12 @@
 
   &[size="sm"]::part(unordered-list) {
     padding: 4px 0px;
+  }
+  
+  &[size="sm"]::part(paper-root),
+  &[size="md"]::part(paper-root) {
+    min-width: 240px;
+    width: auto;
+    max-width: calc(100% - 32px);
   }
 }
