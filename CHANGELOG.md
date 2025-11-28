@@ -7,8 +7,10 @@
 - Added new property for disabling popover on hover in `dx-popover`.
 
 ### Fixed
+- Fixed the disabled state bug of `dx-icon-button`.
 
 ### Changed
+- Changed `dx-dialog` live region styling from a CSS class selector to a `part` attribute with `::part()` selector, ensuring proper accessibility and visual hiding inside shadow DOM. This resolves issues with screen reader announcements and visible text flashes on dialog open.
 
 ### Breaking changes
 
