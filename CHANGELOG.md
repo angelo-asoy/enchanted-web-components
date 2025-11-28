@@ -5,7 +5,6 @@
 ### Added
 - Added a new storybook component for `dx-popover`.
 - Added new property for disabling popover on hover in `dx-popover`.
-- Added new property for auto show popover page load in `dx-chat-dialog`.
 
 ### Fixed
 
