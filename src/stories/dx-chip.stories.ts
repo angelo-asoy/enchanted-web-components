@@ -73,14 +73,14 @@ export const DxChip: Story = {
       <dx-chip
         .name=${args.name}
         .count=${args.count}
-        .iconUrl=${html`<icon-person></icon-person>`}
+        .iconUrl=${html`<icon-person size='16'></icon-person>`}
         ?showChipCount=${args.showChipCount}
         ?showAvatar=${args.showAvatar}
         ?clearIcon=${args.clearIcon}
         ?disabled=${args.disabled}
       >
         <div slot="clear-icon">
-          <icon-close></icon-close>
+          <icon-close size='16'></icon-close>
         </div>
       </dx-chip>
     `;
@@ -104,8 +104,8 @@ export const AllStates: StoryObj = {
         <div>
           <h3>Chips with Avatar</h3>
           <div style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center;">
-            <dx-chip .name=${'Avatar Chip'} .iconUrl=${html`<icon-person></icon-person>`} ?showAvatar=${true}></dx-chip>
-            <dx-chip .name=${'Avatar + Count'} .count=${12} .iconUrl=${html`<icon-person></icon-person>`} ?showAvatar=${true} ?showChipCount=${true}></dx-chip>
+            <dx-chip .name=${'Avatar Chip'} .iconUrl=${html`<icon-person size='16'></icon-person>`} ?showAvatar=${true}></dx-chip>
+            <dx-chip .name=${'Avatar + Count'} .count=${12} .iconUrl=${html`<icon-person size='16'></icon-person>`} ?showAvatar=${true} ?showChipCount=${true}></dx-chip>
           </div>
         </div>
 
@@ -113,13 +113,13 @@ export const AllStates: StoryObj = {
           <h3>Chips with Clear Icon</h3>
           <div style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center;">
             <dx-chip .name=${'Clearable Chip'} ?clearIcon=${true}>
-              <div slot="clear-icon"><icon-close></icon-close></div>
+              <div slot="clear-icon"><icon-close size='16'></icon-close></div>
             </dx-chip>
             <dx-chip .name=${'Clear + Count'} .count=${8} ?clearIcon=${true} ?showChipCount=${true}>
-              <div slot="clear-icon"><icon-close></icon-close></div>
+              <div slot="clear-icon"><icon-close size='16'></icon-close></div>
             </dx-chip>
-            <dx-chip .name=${'Clear + Avatar'} ?clearIcon=${true} ?showAvatar=${true}>
-              <div slot="clear-icon"><icon-close></icon-close></div>
+            <dx-chip .name=${'Clear + Avatar'} ?clearIcon=${true} .iconUrl=${html`<icon-person size='16'></icon-person>`} ?showAvatar=${true}>
+              <div slot="clear-icon"><icon-close size='16'></icon-close></div>
             </dx-chip>
           </div>
         </div>
@@ -127,8 +127,8 @@ export const AllStates: StoryObj = {
         <div>
           <h3>All Features Combined</h3>
           <div style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center;">
-            <dx-chip .name=${'Full Featured'} .count=${25} .iconUrl=${html`<icon-person></icon-person>`} ?showAvatar=${true} ?showChipCount=${true} ?clearIcon=${true}>
-              <div slot="clear-icon"><icon-close></icon-close></div>
+            <dx-chip .name=${'Full Featured'} .count=${25} .iconUrl=${html`<icon-person size='16'></icon-person>`} ?showAvatar=${true} ?showChipCount=${true} ?clearIcon=${true}>
+              <div slot="clear-icon"><icon-close size='16'></icon-close></div>
             </dx-chip>
           </div>
         </div>
@@ -138,20 +138,20 @@ export const AllStates: StoryObj = {
           <div style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center;">
             <dx-chip .name=${'Disabled Basic'} ?disabled=${true}></dx-chip>
             <dx-chip .name=${'Disabled + Count'} .count=${7} ?disabled=${true} ?showChipCount=${true}></dx-chip>
-            <dx-chip .name=${'Disabled + Avatar'} .iconUrl=${html`<icon-person></icon-person>`} ?disabled=${true} ?showAvatar=${true}></dx-chip>
+            <dx-chip .name=${'Disabled + Avatar'} .iconUrl=${html`<icon-person size='16'></icon-person>`} ?disabled=${true} ?showAvatar=${true}></dx-chip>
             <dx-chip .name=${'Disabled + Clear'} ?disabled=${true} ?clearIcon=${true}>
-              <div slot="clear-icon"><icon-close></icon-close></div>
+              <div slot="clear-icon"><icon-close size='16'></icon-close></div>
             </dx-chip>
             <dx-chip
               .name=${'Disabled Full'}
               .count=${42}
-              .iconUrl=${html`<icon-person></icon-person>`}
+              .iconUrl=${html`<icon-person size='16'></icon-person>`}
               ?disabled=${true}
               ?showAvatar=${true}
               ?showChipCount=${true}
               ?clearIcon=${true}
             >
-              <div slot="clear-icon"><icon-close></icon-close></div>
+              <div slot="clear-icon"><icon-close size='16'></icon-close></div>
             </dx-chip>
           </div>
         </div>
@@ -163,12 +163,12 @@ export const AllStates: StoryObj = {
             <dx-chip
               .name=${'Long Name with Features'}
               .count=${99}
-              .iconUrl=${html`<icon-person></icon-person>`}
+              .iconUrl=${html`<icon-person size='16'></icon-person>`}
               ?showAvatar=${true}
               ?showChipCount=${true}
               ?clearIcon=${true}
             >
-              <div slot="clear-icon"><icon-close></icon-close></div>
+              <div slot="clear-icon"><icon-close size='16'></icon-close></div>
             </dx-chip>
           </div>
         </div>

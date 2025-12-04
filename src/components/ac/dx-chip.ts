@@ -18,7 +18,7 @@ import { DxAcBaseElement } from './dx-ac-base-element';
 import { html, nothing } from 'lit';
 
 // Component imports
-import './dx-item-type-avatar';
+import './dx-avatar';
 
 // Helper imports
 import { AVATAR_TYPE, AVATAR_VARIANT, CHIP_PARTS } from '../../types/cssClassEnums';
