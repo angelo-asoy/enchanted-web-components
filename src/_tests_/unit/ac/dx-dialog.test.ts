@@ -21,6 +21,7 @@ import '../../../components/ac/dx-dialog';
 import '../../../components/ac/dx-input-textfield';
 import '../../../components/ac/dx-circular-progress';
 import '../../../components/ac/dx-header';
+import { DxDialog } from '../../../components/ac/dx-dialog';
 
 // Helper imports
 import { initSessionStorage } from '../../utils';
@@ -302,9 +303,7 @@ describe('DxDialog component testing', () => {
       );
 
       await browser.pause(150);
-      // eslint-why refocusDialog is a public method not in the type definition
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      const component = document.querySelector('dx-dialog') as any;
+      const component = document.querySelector('dx-dialog') as DxDialog;
       const inputElement = component?.querySelector('input[id="refocus-input"]') as HTMLElement;
 
       // Blur the input
@@ -330,9 +329,7 @@ describe('DxDialog component testing', () => {
         document.body
       );
 
-      // eslint-why refocusDialog is a public method not in the type definition
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      const component = document.querySelector('dx-dialog') as any;
+      const component = document.querySelector('dx-dialog') as DxDialog;
 
       // Attempt to refocus a closed dialog
       await component.refocusDialog();
@@ -355,9 +352,7 @@ describe('DxDialog component testing', () => {
         document.body
       );
       await browser.pause(150);
-      const component = await document.querySelector('dx-dialog');
-      // eslint-why accessing shadowRoot which is not in type definition
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const component = await document.querySelector('dx-dialog') as DxDialog;
       const inputField = component?.querySelector('dx-input-textfield') as any;
       const shadowInput = inputField?.shadowRoot?.querySelector('input') as HTMLElement;
 
