@@ -24,8 +24,8 @@ import { HEADER_PARTS } from '../../../types/cssClassEnums';
 import { appendEnchantedStylingLink, SNAPSHOT_WINDOW_HEIGHT, SNAPSHOT_WINDOW_WIDTH } from '../utils';
 
 // Icon imports
-import { svgIconClear } from '../../assets/svg-clear';
-import { svgIconSearch } from '../../assets/svg-search';
+import '@hcl-software/enchanted-icons-web-component/dist/carbon/es/close';
+import '@hcl-software/enchanted-icons-web-component/dist/carbon/es/search';
 
 const dxLocalization: Map<string, string> = new Map<string, string>();
 dxLocalization.set('input.textfield.placeholder.type.to.search', 'Type to search');
@@ -50,17 +50,22 @@ function renderHtml() {
 
       <div style="display: flex; flex-direction: column; gap: 5px;">
         <label>with Start Icon</label>
-        <dx-input-textfield .localization=${dxLocalization} exportparts=${HEADER_PARTS.INPUT} .iconStartUrl=${svgIconSearch}> </dx-input-textfield>
+        <dx-input-textfield .localization=${dxLocalization} exportparts=${HEADER_PARTS.INPUT} .actionIcon=${html`<icon-search size="16" color="currentColor"></icon-search>`}> </dx-input-textfield>
       </div>
 
       <div style="display: flex; flex-direction: column; gap: 5px;">
         <label>with End Icon</label>
-        <dx-input-textfield .localization=${dxLocalization} exportparts=${HEADER_PARTS.INPUT} .iconEndUrl=${svgIconClear}> </dx-input-textfield>
+        <dx-input-textfield .localization=${dxLocalization} exportparts=${HEADER_PARTS.INPUT} .clearIcon=${html`<icon-close size="16" color="currentColor"></icon-close>`}> </dx-input-textfield>
       </div>
 
       <div style="display: flex; flex-direction: column; gap: 5px;">
         <label>with both Start and End Icon</label>
-        <dx-input-textfield .localization=${dxLocalization} exportparts=${HEADER_PARTS.INPUT} .iconStartUrl=${svgIconSearch} .iconEndUrl=${svgIconClear}>
+        <dx-input-textfield
+          .localization=${dxLocalization}
+          exportparts=${HEADER_PARTS.INPUT}
+          .actionIcon=${html`<icon-search size="16" color="currentColor"></icon-search>`}
+          .clearIcon=${html`<icon-close size="16" color="currentColor"></icon-close>`}
+        >
         </dx-input-textfield>
       </div>
     </div>

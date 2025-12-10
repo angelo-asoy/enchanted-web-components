@@ -25,7 +25,7 @@ import { initSessionStorage } from '../../utils';
 import { DxInputFieldType } from '../../../types/dx-input-select';
 
 // Icon imports
-import { svgIconClear } from '../../assets/svg-clear';
+import '@hcl-software/enchanted-icons-web-component/dist/carbon/es/close';
 
 const dxLocalization: Map<string, string> = new Map<string, string>();
 dxLocalization.set('input.textfield.placeholder.type.to.search', 'Type to search');
@@ -123,7 +123,7 @@ describe('DxInputTextfield component testing', () => {
           .localization=${dxLocalization}
           field=${DxInputFieldType.QUERY_STRING}
           value="test-value"
-          .clearIconUrl=${svgIconClear}
+          .clearIcon=${html`<icon-close size="16" color="currentColor"></icon-close>`}
         ></dx-input-textfield>
         <button type="button">Click Me!</button>
       `,
@@ -132,7 +132,7 @@ describe('DxInputTextfield component testing', () => {
     let component = await $('dx-input-textfield').getElement();
     await expect(component).toBeDisplayed();
 
-    let clearIcon = await $('>>>dx-svg-icon[data-testid="dx-clear-icon"]').getElement();
+    let clearIcon = await $('>>>div[data-testid="dx-clear-icon"]').getElement();
     clearIcon.click();
     // To get the input element
     let inputElement = await component.$('>>>input[data-testid="dx-input-textfield-input"]').getElement();
@@ -149,7 +149,7 @@ describe('DxInputTextfield component testing', () => {
           .localization=${dxLocalization}
           field=${DxInputFieldType.QUERY_STRING}
           value="test-value"
-          .clearIconUrl=${svgIconClear}
+          .clearIcon=${html`<icon-close size="16" color="currentColor"></icon-close>`}
         ></dx-input-textfield>
         <button type="button">Click Me!</button>
       `,
