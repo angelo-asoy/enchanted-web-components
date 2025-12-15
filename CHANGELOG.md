@@ -10,6 +10,10 @@
 
 ### Breaking changes
 
+## 3.0.0
+
+### Breaking changes
+
 #### Type Renaming
 
 All type, enum and interface have been renamed from `DX*` prefix to `Enchanted*` prefix:
@@ -81,7 +85,6 @@ All web components have been renamed from `dx-*` prefix to `enchanted-*` prefix:
 | dx-theme-inspector | enchanted-theme-inspector |
 | dx-toggle-button | enchanted-toggle-button |
 | dx-tooltip | enchanted-tooltip |
-
 
 ## 2.0.0
 
